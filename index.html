@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paavai Arumugam | Researcher & Academic</title>
+    <meta name="description" content="Academic portfolio of Paavai Arumugam - Research interests, publications, and contact information.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Academicons for academic icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    
+    <style>
+        /* ============================================
+           CUSTOMIZE THESE VARIABLES TO MATCH YOUR STYLE
+           ============================================ */
+        :root {
+            /* Color Scheme - Classic Academic */
+            --primary: #1e3a5f;          /* Deep navy blue */
+            --primary-light: #2d5a87;
+            --accent: #c9a227;           /* Gold accent */
+            --accent-light: #e8c547;
+            --bg-main: #fefdfb;          /* Warm white */
+            --bg-secondary: #f8f6f1;     /* Cream */
+            --bg-card: #ffffff;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --text-muted: #6b6b6b;
+            --border: #e5e2db;
+            --shadow: rgba(30, 58, 95, 0.08);
+        }
+
+        /* Alternative Dark Theme (uncomment to use)
+        :root {
+            --primary: #64b5f6;
+            --primary-light: #90caf9;
+            --accent: #ffd54f;
+            --accent-light: #ffecb3;
+            --bg-main: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-card: #21262d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            --border: #30363d;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-light);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-main);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(254, 253, 251, 0.95);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .nav-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--bg-card);
+            box-shadow: 0 8px 32px var(--shadow);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+        }
+
+        /* Initials placeholder - remove when using real photo */
+        .profile-initials {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--bg-card);
+            box-shadow: 0 8px 32px var(--shadow);
+            background: linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Crimson Pro', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .hero-content h1 {
+            font-size: 2.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .hero-title {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .hero-affiliation {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        section h2::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 24px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* About */
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+        }
+
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .interest-tag {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Publications */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .publication-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .publication-item:hover {
+            box-shadow: 0 4px 20px var(--shadow);
+            border-color: var(--primary-light);
+        }
+
+        .pub-year {
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .pub-title a {
+            color: inherit;
+        }
+
+        .pub-title a:hover {
+            color: var(--primary);
+        }
+
+        .pub-authors {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-authors .me {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .pub-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .pub-link {
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            background: var(--bg-secondary);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .pub-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Education & Experience */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            transform: translateX(-5px);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .timeline-org {
+            color: var(--text-secondary);
+        }
+
+        .timeline-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-value {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 6rem;
+            }
+
+            .profile-photo {
+                margin: 0 auto;
+                width: 160px;
+                height: 160px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .nav-links {
+                display: none; /* Add hamburger menu for mobile if needed */
+            }
+
+            .research-interests {
+                justify-content: center;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            nav { display: none; }
+            .hero { padding-top: 2rem; }
+            section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-name">Paavai Arumugam</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero container">
+        <!-- OPTION 1: Use initials placeholder (current) -->
+        <div class="profile-initials">PA</div>
+        
+        <!-- OPTION 2: Uncomment and add your photo URL when ready
+        <img src="YOUR_PHOTO_URL_HERE" alt="Paavai Arumugam" class="profile-photo">
+        -->
+        
+        <div class="hero-content">
+            <h1>Paavai Arumugam</h1>
+            <p class="hero-title">Staff Software Engineer</p>
+            <p class="hero-affiliation">
+                Department of Software and Services Engineering<br>
+                General Motors, Warren, Michigan.
+            </p>
+            
+            <!-- Social Links - Update with your URLs -->
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=5Hb1vrgAAAAJ" title="Google Scholar" target="_blank">
+                    <i class="ai ai-google-scholar"></i>
+                </a>
+                <a href="https://orcid.org/0009-0002-0442-7530" title="ORCID" target="_blank">
+                    <i class="ai ai-orcid"></i>
+                </a>
+                <a href="https://www.researchgate.net/profile/Paavai-Arumugam" title="ResearchGate" target="_blank">
+                    <i class="ai ai-researchgate"></i>
+                </a>
+                <a href="https://github.com/paavaimano" title="GitHub" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/paavaiarumugam" title="LinkedIn" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I am a Staff Software Engineer at General Motors, working on cutting-edge 
+                software solutions in the automotive industry. My work combines software 
+                engineering expertise with research interests in AI, machine learning, and 
+                intelligent systems.
+            </p>
+            <p class="about-text" style="margin-top: 1rem;">
+                I am passionate about leveraging technology to solve complex problems and 
+                have contributed to various research publications in the field. My focus 
+                areas include software architecture, distributed systems, and AI applications 
+                in the automotive domain.
+            </p>
+            
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-secondary);">Research Interests</h3>
+            <div class="research-interests">
+                <span class="interest-tag">Software Engineering</span>
+                <span class="interest-tag">Machine Learning</span>
+                <span class="interest-tag">Distributed Systems</span>
+                <span class="interest-tag">Automotive AI</span>
+                <span class="interest-tag">Cloud Computing</span>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <!-- Google Scholar Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Citations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">h-index</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">i10-index</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Publications</div>
+                </div>
+            </div>
+
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+                See my <a href="https://scholar.google.com/citations?user=5Hb1vrgAAAAJ" target="_blank">Google Scholar profile</a> for a complete list.
+            </p>
+
+            <div class="publications-list">
+                
+                <!-- Publication 1 -->
+                <article class="publication-item">
+                    <div class="pub-year">2025</div>
+                    <h3 class="pub-title">
+                        <a href="#">AI Tool Usage surge - A Comparative Analysis with Traditional Classrooms - Survey</a>
+                    </h3>
+                    <p class="pub-authors">
+                        <span class="me">Paavai Arumugam</span>
+                    </p>
+                    <p class="pub-venue">Proceedings of the research on AI surge amoung STEM students</p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link">📄 PDF</a>
+                        <a href="#" class="pub-link">🔗 DOI</a>
+                        <a href="#" class="pub-link">💻 Code</a>
+                        <a href="#" class="pub-link">📊 Slides</a>
+                    </div>
+                </article>
+
+                <!-- Publication 2 -->
+                <article class="publication-item">
+                    <div class="pub-year">2024</div>
+                    <h3 class="pub-title">
+                        <a href="#">Face Detection and Image Enhancer using Digital Signal Processing</a>
+                    </h3>
+                    <p class="pub-authors">
+                        M Marimuthu <span class="me">Paavai Arumugam</span>
+                    </p>
+                    <p class="pub-venue">Project Thesis on Image Processing</p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link">📄 PDF</a>
+                        <a href="#" class="pub-link">🔗 DOI</a>
+                        <a href="#" class="pub-link">🎥 Video</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education & Experience</h2>
+            
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-secondary);">Professional Experience</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Present</div>
+                    <div class="timeline-title">Staff Software Engineer</div>
+                    <div class="timeline-org">General Motors, Warren, Michigan</div>
+                    <div class="timeline-desc">Software and Services Engineering</div>
+                </div>
+                <!-- Add more experience items as needed -->
+            </div>
+
+            <h3 style="margin: 2rem 0 1.5rem; font-size: 1.1rem; color: var(--text-secondary);">Education</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2005</div>
+                    <div class="timeline-title">Bachelor of Engineering</div>
+                    <div class="timeline-org">Anna University</div>
+                    <div class="timeline-desc">Electronics and Communications</div>
+                </div>
+                <!-- Add more education items as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <!-- <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">
+                            <a href="mailto:paavai@ieee.org">paavai@ieee.org</a>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">
+                            General Motors<br>
+                            Michigan<br>
+                            United States
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🎓</div>
+                    <div>
+                        <div class="contact-label">Google Scholar</div>
+                        <div class="contact-value">
+                            <a href="https://scholar.google.com/citations?user=5Hb1vrgAAAAJ" target="_blank">View Publications</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div>
+                        <div class="contact-label">Professional</div>
+                        <div class="contact-value">
+                            Open to collaborations and research opportunities.
+                            <a href="mailto:paavai@ieee.org?subject=Collaboration%20Inquiry">Get in touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Paavai Arumugam. Last updated: January 2025</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            Built with ❤️ | Github
+        </p>
+    </footer>
+
+</body>
+</html>
+
